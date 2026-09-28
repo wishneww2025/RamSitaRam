@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>राम SITA राम Bhog of Baba Neem Karoli Maharaj Ji</title>
+  <title>राम SITA राम — Bhog of Baba Neem Karoli Maharaj Ji</title>
+
+  <meta name="description" content="Ram Sita Ram — राम SITA राम — Sattvic Ghee Pongal and Soya Curry, blessed as bhog at Kainchi Dham. Swetta Cooks. Shravan Serves. Baba Sustains. Order on WhatsApp from Hyderabad." />
+  <meta name="keywords" content="Ram Sita Ram, राम SITA राम, Kainchi Dham, Neem Karoli Baba, bhog, sattvic food, ghee pongal, soya curry, Hyderabad, prasad, bhandara" />
+
+  <meta property="og:title" content="Ram Sita Ram — राम SITA राम" />
+  <meta property="og:description" content="Bhog of Baba Neem Karoli Maharaj Ji. Sattvic Ghee Pongal and Soya Curry served with a vow. From Kainchi Dham to you." />
+  <meta property="og:url" content="https://ramsitaram.in" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ramsitaram.in/Offering.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ram Sita Ram — राम SITA राम" />
+  <meta name="twitter:description" content="Bhog of Baba Neem Karoli Maharaj Ji. Sattvic Ghee Pongal and Soya Curry served with a vow." />
+  <meta name="twitter:image" content="https://ramsitaram.in/Offering.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -34,16 +48,34 @@
       font-size: 17px;
     }
 
-    /* ── UTILITY ─────────────────────────────── */
     .section { padding: 80px 24px; max-width: 680px; margin: 0 auto; }
-    .divider {
-      width: 60px; height: 2px;
-      background: var(--gold);
-      margin: 32px auto;
-    }
+    .divider { width: 60px; height: 2px; background: var(--gold); margin: 32px auto; }
     .devanagari { font-family: 'Noto Serif Devanagari', 'Noto Serif', serif; }
 
-    /* ── HEADER / NAV ─────────────────────────── */
+    /* LANGUAGE TOGGLE */
+    .lang-toggle { display: flex; align-items: center; gap: 6px; }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--cream-border);
+      padding: 4px 10px;
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--ink-soft);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .lang-btn.active { background: var(--sindoor); border-color: var(--sindoor); color: var(--ivory); }
+    .lang-btn:hover:not(.active) { border-color: var(--sindoor); color: var(--sindoor); }
+
+    /* SHOW / HIDE */
+    .hi { display: none; }
+    body.lang-hi .en { display: none; }
+    body.lang-hi .hi { display: block; }
+    body.lang-hi span.hi, body.lang-hi a.hi { display: inline; }
+    body.lang-hi span.en, body.lang-hi a.en { display: none; }
+    span.en, a.en { display: inline; }
+
     header {
       position: sticky; top: 0; z-index: 100;
       background: var(--ivory);
@@ -60,6 +92,7 @@
       color: var(--sindoor);
       letter-spacing: 0.02em;
     }
+    .header-right { display: flex; align-items: center; gap: 12px; }
     .header-cta {
       background: var(--sindoor);
       color: var(--ivory);
@@ -73,9 +106,11 @@
     }
     .header-cta:hover { background: var(--sindoor-deep); }
 
-    /* ── HERO ─────────────────────────────────── */
+    /* HERO with background image */
     #hero {
-      background: var(--ink);
+      background-image: url('Offering.jpg');
+      background-size: cover;
+      background-position: center top;
       color: var(--ivory);
       text-align: center;
       padding: 100px 24px 80px;
@@ -86,18 +121,17 @@
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(227,66,52,0.22) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 50% 100%, rgba(255,117,24,0.14) 0%, transparent 70%);
+      background: rgba(20, 10, 5, 0.62);
       pointer-events: none;
     }
+    #hero > * { position: relative; z-index: 1; }
     .om-symbol {
       font-family: 'Noto Serif Devanagari', serif;
       font-size: 40px;
       color: var(--gold);
       display: block;
       margin-bottom: 24px;
-      opacity: 0.85;
+      opacity: 0.9;
     }
     .hero-brand {
       font-family: 'Noto Serif Devanagari', serif;
@@ -116,9 +150,18 @@
       margin-top: 24px;
       font-weight: 400;
     }
+    .hero-tagline-hi {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: clamp(14px, 3vw, 17px);
+      color: var(--gold-muted);
+      margin-top: 24px;
+      display: none;
+    }
+    body.lang-hi .hero-tagline { display: none; }
+    body.lang-hi .hero-tagline-hi { display: block; }
     .hero-sub {
       font-size: 15px;
-      color: rgba(253,246,232,0.65);
+      color: rgba(253,246,232,0.75);
       margin-top: 16px;
       font-style: italic;
     }
@@ -126,7 +169,7 @@
       margin-top: 56px;
       font-size: 22px;
       color: var(--gold);
-      opacity: 0.5;
+      opacity: 0.6;
       animation: bounce 2s infinite;
     }
     @keyframes bounce {
@@ -134,7 +177,6 @@
       50% { transform: translateY(6px); }
     }
 
-    /* ── STORY ────────────────────────────────── */
     #story { background: var(--ivory); text-align: center; }
     .section-eyebrow {
       font-family: 'Cinzel', serif;
@@ -144,6 +186,16 @@
       margin-bottom: 20px;
       display: block;
     }
+    .section-eyebrow-hi {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 13px;
+      color: var(--gold-muted);
+      margin-bottom: 20px;
+      display: none;
+    }
+    body.lang-hi .section-eyebrow { display: none; }
+    body.lang-hi .section-eyebrow-hi { display: block; }
+
     h2 {
       font-family: 'Noto Serif Devanagari', serif;
       font-size: clamp(26px, 6vw, 38px);
@@ -183,8 +235,13 @@
       color: var(--sindoor-deep);
       line-height: 1.6;
     }
+    .pull-quote img {
+      width: 100%;
+      margin-top: 20px;
+      border: none;
+      display: block;
+    }
 
-    /* ── PLACEHOLDER LOGO ─────────────────────── */
     .logo-placeholder {
       width: 120px; height: 120px;
       border-radius: 50%;
@@ -199,7 +256,6 @@
       background: rgba(201,168,76,0.07);
     }
 
-    /* ── DISH ─────────────────────────────────── */
     #dish { background: var(--ivory-warm); text-align: center; }
     .dish-name {
       font-family: 'Noto Serif', serif;
@@ -248,19 +304,11 @@
       font-style: italic;
     }
 
-    /* ── VOW ──────────────────────────────────── */
-    #vow {
-      background: var(--ink);
-      color: var(--ivory);
-      text-align: center;
-    }
+    #vow { background: var(--ink); color: var(--ivory); text-align: center; }
     #vow .section-eyebrow { color: var(--gold); opacity: 0.8; }
+    #vow .section-eyebrow-hi { color: var(--gold); opacity: 0.8; }
     #vow h2 { color: var(--ivory); }
-    .vow-breakdown {
-      margin: 40px auto;
-      max-width: 400px;
-      border: 1px solid rgba(201,168,76,0.3);
-    }
+    .vow-breakdown { margin: 40px auto; max-width: 400px; border: 1px solid rgba(201,168,76,0.3); }
     .vow-row {
       display: flex;
       justify-content: space-between;
@@ -275,36 +323,19 @@
     .vow-total .vow-label { color: var(--ivory); font-weight: 600; }
     .vow-total .vow-amount { font-size: 26px; }
     .vow-total { background: rgba(201,168,76,0.08); }
-    .vow-pledge {
-      margin-top: 44px;
-      padding: 28px;
-      border: 1px solid rgba(201,168,76,0.2);
-      text-align: center;
-    }
-    .vow-pledge p {
-      font-size: 15px;
-      color: rgba(253,246,232,0.75);
-      line-height: 1.85;
-    }
+    .vow-pledge { margin-top: 44px; padding: 28px; border: 1px solid rgba(201,168,76,0.2); text-align: center; }
+    .vow-pledge p { font-size: 15px; color: rgba(253,246,232,0.75); line-height: 1.85; }
     .vow-pledge strong { color: var(--gold); font-weight: 600; }
-    .soul-line {
-      margin-top: 48px;
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      letter-spacing: 0.15em;
-      color: var(--gold-muted);
-    }
+    .soul-line { margin-top: 48px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.15em; color: var(--gold-muted); }
+    .soul-line-hi { margin-top: 48px; font-family: 'Noto Serif Devanagari', serif; font-size: 14px; color: var(--gold-muted); display: none; }
+    body.lang-hi .soul-line { display: none; }
+    body.lang-hi .soul-line-hi { display: block; }
 
-    /* ── ORDER ────────────────────────────────── */
     #order { background: var(--sindoor); text-align: center; color: var(--ivory); }
     #order h2 { color: var(--ivory); }
     #order .section-eyebrow { color: rgba(253,246,232,0.7); }
-    .order-context {
-      font-size: 16px;
-      line-height: 1.8;
-      color: rgba(253,246,232,0.85);
-      margin-top: 24px;
-    }
+    #order .section-eyebrow-hi { color: rgba(253,246,232,0.7); }
+    .order-context { font-size: 16px; line-height: 1.8; color: rgba(253,246,232,0.85); margin-top: 24px; }
     .wa-button {
       display: inline-flex;
       align-items: center;
@@ -322,19 +353,8 @@
       transition: background 0.2s;
     }
     .wa-button:hover { background: var(--ivory-warm); }
-    .wa-icon {
-      width: 22px; height: 22px;
-      fill: #25D366;
-      flex-shrink: 0;
-    }
-    .order-note {
-      margin-top: 20px;
-      font-size: 13px;
-      color: rgba(253,246,232,0.65);
-      font-style: italic;
-    }
+    .wa-icon { width: 22px; height: 22px; fill: #25D366; flex-shrink: 0; }
 
-    /* ── FOOTER ───────────────────────────────── */
     footer {
       background: var(--ink);
       color: rgba(253,246,232,0.45);
@@ -344,17 +364,9 @@
       line-height: 1.8;
     }
     footer a { color: var(--gold-muted); text-decoration: none; }
-    footer .footer-brand {
-      font-family: 'Noto Serif Devanagari', serif;
-      font-size: 18px;
-      color: var(--gold);
-      display: block;
-      margin-bottom: 8px;
-    }
+    footer .footer-brand { font-family: 'Noto Serif Devanagari', serif; font-size: 18px; color: var(--gold); display: block; margin-bottom: 8px; }
 
-    @media (prefers-reduced-motion: reduce) {
-      .hero-scroll-cue { animation: none; }
-    }
+    @media (prefers-reduced-motion: reduce) { .hero-scroll-cue { animation: none; } }
     @media (max-width: 480px) {
       .section { padding: 60px 20px; }
       .vow-row { padding: 16px 20px; }
@@ -363,33 +375,54 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <span class="header-brand devanagari">राम SITA राम</span>
-  <a href="#order" class="header-cta">Order Now</a>
+  <div class="header-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-hi" onclick="setLang('hi')">हिं</button>
+    </div>
+    <a href="#order" class="header-cta">
+      <span class="en">Order Now</span>
+      <span class="hi">अभी ऑर्डर करें</span>
+    </a>
+  </div>
 </header>
 
-<!-- HERO -->
 <section id="hero">
   <span class="om-symbol">ॐ</span>
   <div class="hero-brand devanagari">
     राम <span class="sita">SITA</span> राम
   </div>
   <p class="hero-tagline">Bhog of Baba Neem Karoli Maharaj Ji</p>
-  <p class="hero-sub">Sattvic. Soulful. Served with a Vow.</p>
+  <p class="hero-tagline-hi devanagari">बाबा नीम करोली महाराज जी का भोग</p>
+  <p class="hero-sub">
+    <span class="en">Sattvic. Soulful. Served with a Vow.</span>
+    <span class="hi">सात्विक. भावपूर्ण. एक संकल्प के साथ.</span>
+  </p>
   <div class="hero-scroll-cue">↓</div>
 </section>
 
-<!-- STORY -->
 <section id="story">
   <div class="section">
     <div class="logo-placeholder">🙏</div>
+
     <span class="section-eyebrow">The Origin</span>
-    <h2>A Barefoot Promise at Kainchi Dham</h2>
+    <span class="section-eyebrow-hi devanagari">आरंभ</span>
+
+    <h2>
+      <span class="en">A Barefoot Promise at Kainchi Dham</span>
+      <span class="hi">कैंची धाम में एक नंगे पैर का संकल्प</span>
+    </h2>
     <div class="divider"></div>
-    <img src="kainchidham.jpg" alt="Kainchi Dham, Uttarakhand Baba Neem Karoli Maharaj Ji" class="story-image" />
-    <p class="story-image-caption">Kainchi Dham, Uttarakhand</p>
-    <div class="story-body">
+
+    <img src="Bhog.jpg" alt="The bhog — bowls with marigold from the shrine at Kainchi Dham" class="story-image" />
+    <p class="story-image-caption">
+      <span class="en">Kainchi Dham, September 21 2026</span>
+      <span class="hi">कैंची धाम, 21 सितंबर 2026</span>
+    </p>
+
+    <div class="story-body en">
       <p>It began not with a plan but with a question that had no answer.</p>
       <p>
         On September 18 2026, Shravan left barefoot from Hyderabad, alone, at 4 AM,
@@ -424,7 +457,7 @@
         food be ready by 11:45? Yes, he said, and it was.
       </p>
       <div class="pull-quote">
-        Shravan collected and carried back into the temple, bowls in both hands,
+        The food was collected and carried back into the temple, bowls in both hands,
         standing in the queue. Rajan Panditji had never been met before that moment, yet there he
         was, standing in front of the Shiv Mandir on a Monday, the day of Shiva. He
         took the bowls without hesitation and said he would offer them to Baba himself.
@@ -436,6 +469,7 @@
         were fed. Prakash refused payment; Kundan asked only ₹500 for gas. Every
         ingredient had come from Milan Stores in Garam Pani.
       </p>
+      <img src="Offering.jpg" alt="Serving the bhog at Kainchi Dham" class="story-image" style="margin-top: 28px;" />
       <p>
         None of it was planned, not Dada, not Kundan's confusion that became faith,
         not the noon timing, not Rajan Panditji standing exactly where he needed to be
@@ -453,118 +487,253 @@
         that something larger had already decided what this would become.
       </p>
     </div>
+
+    <div class="story-body hi devanagari">
+      <p>यह किसी योजना से नहीं, बल्कि एक ऐसे सवाल से शुरू हुआ जिसका कोई जवाब नहीं था।</p>
+      <p>
+        18 सितंबर 2026 को, Shravan हैदराबाद से नंगे पैर, अकेले, सुबह 4 बजे निकले,
+        वह खाना लेकर जो Swetta ने रात 2 बजे उठकर बनाया था, बिना यह जाने कि क्यों।
+        घी पोंगल और सोया करी, बिना प्याज, बिना लहसुन, उस देखभाल के साथ पैक किया
+        जो केवल एक पत्नी दे सकती है जो अपने पति की अंतरात्मा पर भरोसा करती हो।
+      </p>
+      <p>
+        Vimal नाम के एक कैब ड्राइवर ने, बिना पूछे, पहले भूमियांधार मंदिर और फिर
+        कैंची धाम रुकने का सुझाव दिया। भोजन बाबा को अर्पित किया गया और मंदिर के
+        बाहर 11 भक्तों ने हैदराबाद से लाया हुआ भोग ग्रहण किया। उस शाम दर्शन के
+        लिए लौटते समय, सुरक्षा गार्ड को याद था और उसने कहा कि खाना सच में बहुत
+        स्वादिष्ट था।
+      </p>
+      <p>
+        उसी शाम, त्रिपाठी जी जिन्हें दादा कहा जाता है, उन्होंने यह कहानी सुनी।
+        उन्होंने खाना नहीं खाया था और उन्हें लगा यह संयोग नहीं था; बाबा चाहते थे
+        कि यह खाना फिर बने। उन्होंने अपना फोन उठाया और Hotel Anupam के मालिक
+        Kundan को फोन किया, बताया कि एक भक्त के लिए खाना बनाना है। Kundan हैरान थे,
+        मंदिर अपना खाना खुद बनाता है, तो उनसे क्यों पूछा जा रहा है? वह कुछ देर उस
+        उलझन में बैठे रहे और फिर उन्हें महसूस हुआ, यह बाबा का काम है, और उन्होंने
+        हाँ कह दिया।
+      </p>
+      <p>
+        उस रविवार की शाम, Swetta ने हैदराबाद से Hotel Anupam के शेफ Prakash को
+        फोन किया। उन्होंने फोन पर पूरी रेसिपी बताई, हर कदम समझाया, और सुनिश्चित
+        किया कि वह समझें इस रसोई में सात्विक का मतलब क्या है, बिना प्याज, बिना
+        लहसुन, कुछ भी नहीं जो भोग को कमज़ोर करे।
+      </p>
+      <p>
+        21 सितंबर की सुबह, दर्शन के दौरान, एक पंडितजी ने बताया कि दोपहर को बाबा
+        को भोग लगाया जाता है। तुरंत Prakash को फोन गया, क्या 11:45 तक खाना तैयार
+        हो सकता है? हाँ, उन्होंने कहा, और हो गया।
+      </p>
+      <div class="pull-quote">
+        खाना लेकर दोनों हाथों में कटोरे थामे मंदिर में वापस लौटे, कतार में खड़े
+        हुए। Rajan पंडितजी से पहले कभी मुलाकात नहीं हुई थी, फिर भी वह वहाँ थे,
+        सोमवार को, शिव के दिन, शिव मंदिर के सामने। उन्होंने बिना संकोच कटोरे ले लिए
+        और कहा कि वह खुद बाबा को भोग लगाएंगे। वह कटोरे लेकर वापस आए और उनमें
+        मंदिर के गेंदे के फूल थे।
+      </div>
+      <p>
+        वे कटोरे Hotel Anupam वापस गए, बड़े बर्तनों में मिले, और Rohit और Vijay
+        बिना कहे साथ खड़े हो गए, 75 से अधिक भक्तों को भोजन मिला। Prakash ने
+        पैसे लेने से मना किया; Kundan ने केवल गैस के लिए ₹500 माँगे। हर सामग्री
+        गरम पानी में Milan Stores से आई थी।
+      </p>
+      <img src="Offering.jpg" alt="कैंची धाम में भोग परोसते हुए" class="story-image" style="margin-top: 28px;" />
+      <p>
+        कुछ भी योजनाबद्ध नहीं था, न दादा, न Kundan की वह उलझन जो आस्था बन गई,
+        न दोपहर का वह समय, न Rajan पंडितजी का ठीक उस दिन ठीक उस जगह खड़े होना,
+        न Prakash का समय पर खाना देना, न गेंदे के फूलों का कटोरों में वापस आना।
+      </p>
+      <p>
+        और आज तक कोई स्पष्टीकरण नहीं है कि खाना घर पर बनाकर हैदराबाद से क्यों
+        लाना पड़ा, Swetta रात 2 बजे क्यों उठीं और बिना दूसरा सोचे हाँ क्यों कहा,
+        या हर दरवाज़ा ठीक उसी वक्त क्यों खुला जब खुलना था।
+      </p>
+      <p>
+        राम SITA राम उसी पल से जन्मा, एक व्यापार के रूप में नहीं, बल्कि इस
+        पहचान के रूप में कि किसी बड़ी शक्ति ने पहले से तय कर लिया था यह क्या बनेगा।
+      </p>
+    </div>
+
   </div>
 </section>
 
-<!-- DISH -->
 <section id="dish">
   <div class="section">
     <span class="section-eyebrow">What We Serve</span>
-    <h2>One Dish. One Truth.</h2>
+    <span class="section-eyebrow-hi devanagari">हम क्या परोसते हैं</span>
+
+    <h2>
+      <span class="en">One Dish. One Truth.</span>
+      <span class="hi">एक थाली. एक सत्य.</span>
+    </h2>
     <div class="divider"></div>
 
-    <p class="dish-name">Ghee Pongal &amp; Soya Curry</p>
+    <p class="dish-name">
+      <span class="en">Ghee Pongal &amp; Soya Curry</span>
+      <span class="hi devanagari">घी पोंगल और सोया करी</span>
+    </p>
 
     <div class="dish-attributes">
-      <span class="attr-tag">Pure Ghee</span>
-      <span class="attr-tag">Sattvic</span>
-      <span class="attr-tag">Single Item</span>
-      <span class="attr-tag no">No Onion</span>
-      <span class="attr-tag no">No Garlic</span>
-      <span class="attr-tag">Home Cooked</span>
+      <span class="attr-tag en">Pure Ghee</span>
+      <span class="attr-tag hi devanagari">शुद्ध घी</span>
+      <span class="attr-tag en">Sattvic</span>
+      <span class="attr-tag hi devanagari">सात्विक</span>
+      <span class="attr-tag en">Single Item</span>
+      <span class="attr-tag hi devanagari">एकमात्र व्यंजन</span>
+      <span class="attr-tag no en">No Onion</span>
+      <span class="attr-tag no hi devanagari">बिना प्याज</span>
+      <span class="attr-tag no en">No Garlic</span>
+      <span class="attr-tag no hi devanagari">बिना लहसुन</span>
+      <span class="attr-tag en">Home Cooked</span>
+      <span class="attr-tag hi devanagari">घर का बना</span>
     </div>
 
-    <p class="dish-desc">
-      Ghee Pongal is rice and lentils cooked in pure ghee slow, simple, warm.
+    <div class="dish-desc en">
+      <p>Ghee Pongal is rice and lentils cooked in pure ghee, slow, simple, warm.
       It is temple food. The kind served in prasad, offered before eating.
       Paired with a soya curry built on the same sattvic principles: no allium,
-      no shortcuts. Just ingredients that don't ask the body to fight itself.
-    </p>
-    <p class="dish-desc" style="margin-top: 16px;">
-      We serve one dish because one dish, made right, is enough.
-      This is not a menu. This is a bhog.
-    </p>
+      no shortcuts. Just ingredients that don't ask the body to fight itself.</p>
+      <p style="margin-top:16px;">We serve one dish because one dish, made right, is enough.
+      This is not a menu. This is a bhog.</p>
+    </div>
+    <div class="dish-desc hi devanagari">
+      <p>घी पोंगल चावल और दाल का वह भोजन है जो शुद्ध घी में धीरे-धीरे, सादगी से,
+      प्रेम से पकाया जाता है। यह मंदिर का खाना है, वैसा जो प्रसाद में परोसा जाता है,
+      खाने से पहले अर्पित किया जाता है। साथ में एक सोया करी, उसी सात्विक नियम पर,
+      बिना प्याज, बिना लहसुन, बिना किसी शॉर्टकट के।</p>
+      <p style="margin-top:16px;">हम एक ही व्यंजन परोसते हैं क्योंकि एक व्यंजन, सही तरीके से बना हो, तो काफी है।
+      यह मेन्यू नहीं है। यह भोग है।</p>
+    </div>
 
-    <div class="price-badge">₹ 120 per plate</div>
-    <p class="price-note">Includes Baba's share. See below.</p>
+    <div class="price-badge">₹ 120 <span class="en">per plate</span><span class="hi devanagari">प्रति थाली</span></div>
+    <p class="price-note">
+      <span class="en">Includes Baba's share. See below.</span>
+      <span class="hi devanagari">बाबा का हिस्सा शामिल है। नीचे देखें।</span>
+    </p>
   </div>
 </section>
 
-<!-- VOW -->
 <section id="vow">
   <div class="section">
     <span class="section-eyebrow">The Commitment</span>
-    <h2>Every Plate Carries a Vow</h2>
+    <span class="section-eyebrow-hi devanagari">संकल्प</span>
+
+    <h2>
+      <span class="en">Every Plate Carries a Vow</span>
+      <span class="hi">हर थाली एक संकल्प लेकर आती है</span>
+    </h2>
     <div class="divider"></div>
 
     <div class="vow-breakdown">
       <div class="vow-row">
         <div class="vow-label">
-          Sacred Meal
-          <small>The bhog cooked, served, nourishing</small>
+          <span class="en">Sacred Meal</span>
+          <span class="hi devanagari">पवित्र भोजन</span>
+          <small>
+            <span class="en">The bhog cooked, served, nourishing</span>
+            <span class="hi devanagari">भोग, पकाया, परोसा, पोषण देता</span>
+          </small>
         </div>
         <span class="vow-amount">₹108</span>
       </div>
       <div class="vow-row">
         <div class="vow-label">
-          Baba's Direct Share
-          <small>Offered to Kainchi Dham Trust on every visit</small>
+          <span class="en">Baba's Direct Share</span>
+          <span class="hi devanagari">बाबा का सीधा हिस्सा</span>
+          <small>
+            <span class="en">Offered to Kainchi Dham Trust on every visit</span>
+            <span class="hi devanagari">हर यात्रा में कैंची धाम ट्रस्ट को स्वयं अर्पित</span>
+          </small>
         </div>
         <span class="vow-amount">₹12</span>
       </div>
       <div class="vow-row vow-total">
         <div class="vow-label">
-          Your plate, complete
+          <span class="en">Your plate, complete</span>
+          <span class="hi devanagari">आपकी थाली, पूर्ण</span>
         </div>
         <span class="vow-amount">₹120</span>
       </div>
     </div>
 
     <div class="vow-pledge">
-      <p>
+      <p class="en">
         The ₹12 from every plate is not a donation option or a rounding.<br />
         It is <strong>non-negotiable</strong>. It is the vow made barefoot at Kainchi Dham.<br /><br />
         We physically carry Baba's share to the Kainchi Dham Trust on every visit.
         No system. No intermediary. Just showing up with what is owed.
       </p>
+      <p class="hi devanagari">
+        हर थाली का ₹12 कोई दान का विकल्प नहीं है, न ही गोलाई का आंकड़ा।<br />
+        यह <strong>अटल है</strong>। यह वह संकल्प है जो कैंची धाम में नंगे पैर लिया गया था।<br /><br />
+        हम बाबा का हिस्सा हर यात्रा में कैंची धाम ट्रस्ट को स्वयं पहुँचाते हैं।
+        कोई प्रणाली नहीं। कोई बिचौलिया नहीं। बस जो देना है उसे लेकर उपस्थित होना।
+      </p>
     </div>
 
     <p class="soul-line">Swetta Cooks &nbsp;·&nbsp; Shravan Serves &nbsp;·&nbsp; Baba Sustains</p>
+    <p class="soul-line-hi devanagari">Swetta पकाती हैं &nbsp;·&nbsp; Shravan परोसते हैं &nbsp;·&nbsp; बाबा चलाते हैं</p>
   </div>
 </section>
 
-<!-- ORDER -->
 <section id="order">
   <div class="section">
     <span class="section-eyebrow">Place Your Order</span>
-    <h2>Write to Us on WhatsApp</h2>
+    <span class="section-eyebrow-hi devanagari">ऑर्डर करें</span>
+
+    <h2>
+      <span class="en">Write to Us on WhatsApp</span>
+      <span class="hi">WhatsApp पर संपर्क करें</span>
+    </h2>
     <div class="divider" style="background: rgba(253,246,232,0.4);"></div>
 
-    <p class="order-context">
+    <p class="order-context en">
       No app. No cart. No checkout form.<br />
       Message us the number of plates and when you need them.<br />
       We'll confirm and cook fresh.
     </p>
+    <p class="order-context hi devanagari">
+      कोई ऐप नहीं. कोई कार्ट नहीं. कोई फॉर्म नहीं.<br />
+      हमें थालियों की संख्या और समय बताएं।<br />
+      हम पुष्टि करेंगे और ताज़ा पकाएंगे।
+    </p>
 
     <a href="https://wa.me/916361769435?text=Jai%20Baba%20Neem%20Karoli%20Ji%20%F0%9F%99%8F%20I%20would%20like%20to%20order%20from%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%20SITA%20%E0%A4%B0%E0%A4%BE%E0%A4%AE."
-       class="wa-button"
-       target="_blank" rel="noopener noreferrer">
+       class="wa-button" target="_blank" rel="noopener noreferrer">
       <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
       </svg>
-      Order on WhatsApp
+      <span class="en">Order on WhatsApp</span>
+      <span class="hi devanagari">WhatsApp पर ऑर्डर करें</span>
     </a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <span class="footer-brand">राम SITA राम</span>
-  A venture of WishNeww Ventures &nbsp;·&nbsp; <a href="https://ramsitaram.in">ramsitaram.in</a><br />
+  <span class="en">A venture of WishNeww Ventures &nbsp;·&nbsp;</span>
+  <span class="hi devanagari">WishNeww Ventures का उद्यम &nbsp;·&nbsp;</span>
+  <a href="https://ramsitaram.in">ramsitaram.in</a><br />
   <span style="margin-top: 8px; display: inline-block;">
-    Bhog of Baba Neem Karoli Maharaj Ji &nbsp;·&nbsp; Kainchi Dham, Uttarakhand
+    <span class="en">Bhog of Baba Neem Karoli Maharaj Ji &nbsp;·&nbsp; Kainchi Dham, Uttarakhand</span>
+    <span class="hi devanagari">बाबा नीम करोली महाराज जी का भोग &nbsp;·&nbsp; कैंची धाम, उत्तराखंड</span>
   </span>
 </footer>
+
+<script>
+  function setLang(lang) {
+    document.body.classList.remove('lang-en', 'lang-hi');
+    document.body.classList.add('lang-' + lang);
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-hi').classList.toggle('active', lang === 'hi');
+    try { localStorage.setItem('rsr-lang', lang); } catch(e) {}
+  }
+  (function() {
+    try {
+      var saved = localStorage.getItem('rsr-lang');
+      if (saved === 'hi') setLang('hi');
+    } catch(e) {}
+  })();
+</script>
 
 </body>
 </html>
