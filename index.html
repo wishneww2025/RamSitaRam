@@ -47,19 +47,11 @@
       line-height: 1.75;
       font-size: 17px;
     }
-    .vow-note {
-      font-size: 13px;
-      color: rgba(253,246,232,0.6);
-      font-style: italic;
-      text-align: center;
-      padding: 12px 28px;
-      border-top: 1px solid rgba(201,168,76,0.15);
-    }
+
     .section { padding: 80px 24px; max-width: 680px; margin: 0 auto; }
     .divider { width: 60px; height: 2px; background: var(--gold); margin: 32px auto; }
     .devanagari { font-family: 'Noto Serif Devanagari', 'Noto Serif', serif; }
 
-    /* LANGUAGE TOGGLE */
     .lang-toggle { display: flex; align-items: center; gap: 6px; }
     .lang-btn {
       background: none;
@@ -75,7 +67,6 @@
     .lang-btn.active { background: var(--sindoor); border-color: var(--sindoor); color: var(--ivory); }
     .lang-btn:hover:not(.active) { border-color: var(--sindoor); color: var(--sindoor); }
 
-    /* SHOW / HIDE */
     .hi { display: none; }
     body.lang-hi .en { display: none; }
     body.lang-hi .hi { display: block; }
@@ -113,11 +104,10 @@
     }
     .header-cta:hover { background: var(--sindoor-deep); }
 
-    /* HERO with background image */
     #hero {
       background-image: url('Offering.jpg');
       background-size: cover;
-      background-position: center 40%;
+      background-position: center 20%;
       color: var(--ivory);
       text-align: center;
       padding: 100px 24px 80px;
@@ -151,7 +141,7 @@
     .hero-brand .sita { color: var(--gold); }
     .hero-tagline {
       font-family: 'Cinzel', serif;
-      font-size: clamp(15px, 3.5vw, 16px);
+      font-size: clamp(15px, 3.5vw, 20px);
       color: var(--ivory);
       letter-spacing: 0.12em;
       margin-top: 24px;
@@ -242,12 +232,6 @@
       color: var(--sindoor-deep);
       line-height: 1.6;
     }
-    .pull-quote img {
-      width: 100%;
-      margin-top: 20px;
-      border: none;
-      display: block;
-    }
 
     .logo-placeholder {
       width: 120px; height: 120px;
@@ -311,6 +295,84 @@
       font-style: italic;
     }
 
+    #benefits { background: var(--ivory-warm); }
+
+    .ram-214 {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 8px auto 16px;
+    }
+    .ram-digit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+    .ram-digit strong {
+      font-family: 'Cinzel', serif;
+      font-size: 36px;
+      color: var(--sindoor);
+      line-height: 1;
+    }
+    .ram-digit span {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--gold-muted);
+      font-family: 'Cinzel', serif;
+      text-transform: uppercase;
+    }
+    .ram-digit span.hi { font-family: 'Noto Serif Devanagari', serif; letter-spacing: 0; font-size: 12px; }
+    .ram-dot {
+      font-size: 28px;
+      color: var(--gold);
+      line-height: 1.4;
+      padding-top: 4px;
+    }
+    .ram-meaning {
+      font-size: 13px;
+      color: var(--ink-soft);
+      font-style: italic;
+      margin-top: 4px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .benefit-item {
+      padding: 24px;
+      border: 1px solid var(--cream-border);
+      background: var(--ivory);
+    }
+
+    .benefit-number {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 36px;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .benefit-title {
+      font-family: 'Noto Serif', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--sindoor);
+      margin-bottom: 8px;
+    }
+
+    .benefit-desc {
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.75;
+    }
+
     #vow { background: var(--ink); color: var(--ivory); text-align: center; }
     #vow .section-eyebrow { color: var(--gold); opacity: 0.8; }
     #vow .section-eyebrow-hi { color: var(--gold); opacity: 0.8; }
@@ -330,6 +392,14 @@
     .vow-total .vow-label { color: var(--ivory); font-weight: 600; }
     .vow-total .vow-amount { font-size: 26px; }
     .vow-total { background: rgba(201,168,76,0.08); }
+    .vow-note {
+      font-size: 13px;
+      color: rgba(253,246,232,0.6);
+      font-style: italic;
+      text-align: center;
+      padding: 12px 28px;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
     .vow-pledge { margin-top: 44px; padding: 28px; border: 1px solid rgba(201,168,76,0.2); text-align: center; }
     .vow-pledge p { font-size: 15px; color: rgba(253,246,232,0.75); line-height: 1.85; }
     .vow-pledge strong { color: var(--gold); font-weight: 600; }
@@ -377,6 +447,7 @@
     @media (max-width: 480px) {
       .section { padding: 60px 20px; }
       .vow-row { padding: 16px 20px; }
+      .benefits-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -617,6 +688,82 @@
   </div>
 </section>
 
+<section id="benefits">
+  <div class="section" style="text-align: center;">
+    <img src="babaram.png" alt="राम in Baba's handwriting" style="height: 64px; width: auto; margin: 0 auto 8px; display: block; opacity: 0.85;" />
+    <div class="ram-214">
+      <span class="ram-digit">
+        <strong>2</strong>
+        <span class="en">Offerings</span>
+        <span class="hi devanagari">अर्पण</span>
+      </span>
+      <span class="ram-dot">·</span>
+      <span class="ram-digit">
+        <strong>1</strong>
+        <span class="en">Bhog</span>
+        <span class="hi devanagari">भोग</span>
+      </span>
+      <span class="ram-dot">·</span>
+      <span class="ram-digit">
+        <strong>4</strong>
+        <span class="en">Benefits</span>
+        <span class="hi devanagari">लाभ</span>
+      </span>
+    </div>
+    <p class="ram-meaning">
+      <span class="en">This is how राम looks when Baba writes it. 2 offerings, 1 bhog, 4 benefits.</span>
+      <span class="hi devanagari">बाबा जब राम लिखते हैं तो ऐसा दिखता है। 2 अर्पण, 1 भोग, 4 लाभ।</span>
+    </p>
+    <h2 style="margin-top: 24px;">
+      <span class="en">Four Reasons This Plate Nourishes</span>
+      <span class="hi">यह थाली चार कारणों से पोषण देती है</span>
+    </h2>
+    <p style="font-size: 15px; color: var(--ink-soft); margin-top: 8px; font-style: italic;">
+      <span class="en">2 ingredients. 1 bhog. 4 reasons it feeds more than hunger.</span>
+      <span class="hi devanagari">2 अर्पण. 1 भोग. 4 कारण जो भूख से ज़्यादा तृप्त करते हैं.</span>
+    </p>
+    <div class="divider"></div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-number">1</div>
+        <h3 class="benefit-title">
+          <span class="en">Complete Protein</span>
+          <span class="hi devanagari">संपूर्ण प्रोटीन</span>
+        </h3>
+        <p class="benefit-desc en">Soya granules deliver full plant protein, rare in a single sattvic dish, keeping you full and strong without meat.</p>
+        <p class="benefit-desc hi devanagari">सोया ग्रेन्यूल्स पूर्ण पौधा-आधारित प्रोटीन देते हैं, एक सात्विक थाली में यह दुर्लभ है, मांस के बिना आपको तृप्त और मज़बूत रखते हैं।</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-number">2</div>
+        <h3 class="benefit-title">
+          <span class="en">Sustained Energy</span>
+          <span class="hi devanagari">स्थायी ऊर्जा</span>
+        </h3>
+        <p class="benefit-desc en">Rice and lentils in Ghee Pongal release energy slowly, no sugar crash, no heaviness, just steady warmth throughout the day.</p>
+        <p class="benefit-desc hi devanagari">घी पोंगल में चावल और दाल ऊर्जा धीरे-धीरे देते हैं, न शुगर क्रैश, न भारीपन, बस पूरे दिन एक स्थिर ऊष्मा।</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-number">3</div>
+        <h3 class="benefit-title">
+          <span class="en">Gut Friendly</span>
+          <span class="hi devanagari">पाचन के लिए सहज</span>
+        </h3>
+        <p class="benefit-desc en">Pure ghee aids digestion and moong dal is one of the gentlest foods for the stomach, easy on the body every single day.</p>
+        <p class="benefit-desc hi devanagari">शुद्ध घी पाचन में सहायक है और मूंग दाल पेट के लिए सबसे सौम्य खाद्य पदार्थों में से एक है, हर दिन शरीर पर कोमल।</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-number">4</div>
+        <h3 class="benefit-title">
+          <span class="en">Sattvic and Clean</span>
+          <span class="hi devanagari">सात्विक और शुद्ध</span>
+        </h3>
+        <p class="benefit-desc en">No onion, no garlic, no preservatives, nothing that agitates the body or the mind. Food that the body receives as peace.</p>
+        <p class="benefit-desc hi devanagari">बिना प्याज, बिना लहसुन, बिना परिरक्षक, कुछ भी नहीं जो शरीर या मन को उद्वेलित करे। वह भोजन जिसे शरीर शांति के रूप में ग्रहण करता है।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="vow">
   <div class="section">
     <span class="section-eyebrow">The Commitment</span>
@@ -664,7 +811,7 @@
       </div>
     </div>
 
-     <div class="vow-pledge">
+    <div class="vow-pledge">
       <p class="en">
         Baba is not a beneficiary. He is the founder.<br />
         We are simply the ones who show up and cook.
@@ -715,8 +862,8 @@
 
 <footer>
   <span class="footer-brand">राम SITA राम</span>
-  <span class="en">A venture of WishNeww Ventures &nbsp;·&nbsp;</span>
-  <span class="hi devanagari">WishNeww Ventures का उद्यम &nbsp;·&nbsp;</span>
+  <span class="en">An offering of WishNeww Ventures &nbsp;·&nbsp;</span>
+  <span class="hi devanagari">एक अर्पण, WishNeww Ventures की ओर से &nbsp;·&nbsp;</span>
   <a href="https://ramsitaram.in">ramsitaram.in</a><br />
   <span style="margin-top: 8px; display: inline-block;">
     <span class="en">Bhog of Baba Neem Karoli Maharaj Ji &nbsp;·&nbsp; Kainchi Dham, Uttarakhand</span>
