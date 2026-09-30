@@ -144,9 +144,10 @@
       font-family: 'Noto Serif', serif;
       font-size: clamp(15px, 3.5vw, 20px);
       color: var(--ivory);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.04em;
       margin-top: 10px;
       font-weight: 400;
+      text-transform: none;
     }
     .hero-tagline-hi {
       font-family: 'Noto Serif Devanagari', serif;
@@ -455,7 +456,10 @@
 <body>
 
 <header>
-  <span class="header-brand devanagari">राम SITA राम</span>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="logo.png" alt="राम SITA राम logo" style="height:36px; width:auto; display:none;" id="header-logo" />
+    <span class="header-brand devanagari">राम SITA राम</span>
+  </div>
   <div class="header-right">
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
@@ -469,7 +473,6 @@
 </header>
 
 <section id="hero">
-  <span class="om-symbol">ॐ</span>
   <div class="hero-brand devanagari">
     राम <span class="sita">SITA</span> राम
   </div>
@@ -484,8 +487,6 @@
 
 <section id="story">
   <div class="section">
-    <div class="logo-placeholder">🙏</div>
-
     <span class="section-eyebrow">The Origin</span>
     <span class="section-eyebrow-hi devanagari">आरंभ</span>
 
