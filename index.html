@@ -84,13 +84,6 @@
       align-items: center;
       justify-content: space-between;
     }
-    .header-brand {
-      font-family: 'Noto Serif Devanagari', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--sindoor);
-      letter-spacing: 0.02em;
-    }
     .header-right { display: flex; align-items: center; gap: 12px; }
     .header-cta {
       background: var(--sindoor);
@@ -127,23 +120,6 @@
       pointer-events: none;
     }
     #hero > * { position: relative; z-index: 1; }
-    .om-symbol {
-      font-family: 'Noto Serif Devanagari', serif;
-      font-size: 40px;
-      color: var(--gold);
-      display: block;
-      margin-bottom: 24px;
-      opacity: 0.9;
-    }
-    .hero-brand {
-      font-family: 'Noto Serif Devanagari', serif;
-      font-size: clamp(48px, 12vw, 96px);
-      font-weight: 700;
-      line-height: 1.1;
-      color: var(--ivory);
-      letter-spacing: 0.01em;
-    }
-    .hero-brand .sita { color: var(--gold); }
     .hero-tagline {
       font-family: 'Noto Serif', serif;
       font-size: clamp(15px, 3.5vw, 20px);
@@ -239,20 +215,6 @@
       line-height: 1.6;
     }
 
-    .logo-placeholder {
-      width: 120px; height: 120px;
-      border-radius: 50%;
-      border: 2px dashed var(--gold);
-      margin: 0 auto 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Noto Serif Devanagari', serif;
-      font-size: 36px;
-      color: var(--gold);
-      background: rgba(201,168,76,0.07);
-    }
-
     #dish { background: var(--ivory-warm); text-align: center; }
     .dish-name {
       font-family: 'Noto Serif', serif;
@@ -302,46 +264,6 @@
     }
 
     #benefits { background: var(--ivory-warm); }
-
-    .ram-214 {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      margin: 8px auto 16px;
-    }
-    .ram-digit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
-    }
-    .ram-digit strong {
-      font-family: 'Caveat', cursive;
-      font-size: 48px;
-      color: var(--sindoor);
-      line-height: 1;
-      font-weight: 700;
-    }
-    .ram-digit span {
-      font-family: 'Caveat', cursive;
-      font-size: 16px;
-      color: var(--gold-muted);
-      letter-spacing: 0.04em;
-    }
-    .ram-digit span.hi { font-family: 'Caveat', cursive; font-size: 16px; }
-    .ram-dot {
-      font-size: 28px;
-      color: var(--gold);
-      line-height: 1.4;
-      padding-top: 4px;
-    }
-    .ram-meaning {
-      font-size: 13px;
-      color: var(--ink-soft);
-      font-style: italic;
-      margin-top: 4px;
-    }
 
     .benefits-grid {
       display: grid;
@@ -448,7 +370,6 @@
       font-family: 'Noto Serif', serif;
     }
     footer a { color: var(--gold-muted); text-decoration: none; font-family: 'Caveat', cursive; font-size: 17px; }
-    footer .footer-brand { font-family: 'Caveat', cursive; font-size: 32px; color: var(--gold); display: block; margin-bottom: 8px; font-weight: 700; }
 
     @media (prefers-reduced-motion: reduce) { .hero-scroll-cue { animation: none; } }
     @media (max-width: 480px) {
@@ -509,120 +430,34 @@
 
     <div class="story-body en">
       <p>It began not with a plan, but with an unanswerable question.</p>
-      <p>
-        On September 18, 2026, at 4 AM, Shravan departed Hyderabad barefoot and alone.
-        He carried food his wife Swetta had woken at 2 AM to cook, without knowing its purpose.
-        Ghee Pongal and Soya curry, no onion, no garlic, packed with the care only a wife
-        trusting her husband's instinct can offer.
-      </p>
-      <p>
-        A cab driver named Vimal, unprompted, suggested stopping at Bhumiyandhar temple
-        before Kainchi Dham. The food was offered to Baba, then distributed as bhog to
-        11 devotees outside. That evening, returning for darshan, the security guard
-        remembered him and remarked on the food's exceptional taste.
-      </p>
-      <p>
-        Later that same evening, Tripathi Ji, known as Dada, heard the story. Having not
-        eaten, he felt it was no coincidence, Baba wanted this dish cooked again. He called
-        Kundan, owner of Hotel Anupam, explaining a devotee needed a specific dish prepared.
-        Kundan was puzzled; the temple cooked its own food, so why him? He sat with his
-        confusion for a moment, then a feeling struck him: this was Baba's doing. He agreed.
-      </p>
-      <p>
-        That Sunday evening, Swetta called Prakash, the chef at Hotel Anupam, from Hyderabad.
-        She shared the recipe over the phone, explaining every step and emphasising the sattvic
-        requirements for this kitchen: no onion, no garlic, nothing that would dilute the offering.
-      </p>
-      <p>
-        On the morning of September 21, during darshan, a panditji mentioned bhog is offered
-        to Baba at noon. The call to Prakash was immediate: could the food be ready by 11:45?
-        Yes, he confirmed, and it was.
-      </p>
+      <p>On September 18, 2026, at 4 AM, Shravan departed Hyderabad barefoot and alone. He carried food his wife Swetta had woken at 2 AM to cook, without knowing its purpose. Ghee Pongal and Soya curry, no onion, no garlic, packed with the care only a wife trusting her husband's instinct can offer.</p>
+      <p>A cab driver named Vimal, unprompted, suggested stopping at Bhumiyandhar temple before Kainchi Dham. The food was offered to Baba, then distributed as bhog to 11 devotees outside. That evening, returning for darshan, the security guard remembered him and remarked on the food's exceptional taste.</p>
+      <p>Later that same evening, Tripathi Ji, known as Dada, heard the story. Having not eaten, he felt it was no coincidence, Baba wanted this dish cooked again. He called Kundan, owner of Hotel Anupam, explaining a devotee needed a specific dish prepared. Kundan was puzzled; the temple cooked its own food, so why him? He sat with his confusion for a moment, then a feeling struck him: this was Baba's doing. He agreed.</p>
+      <p>That Sunday evening, Swetta called Prakash, the chef at Hotel Anupam, from Hyderabad. She shared the recipe over the phone, explaining every step and emphasising the sattvic requirements for this kitchen: no onion, no garlic, nothing that would dilute the offering.</p>
+      <p>On the morning of September 21, during darshan, a panditji mentioned bhog is offered to Baba at noon. The call to Prakash was immediate: could the food be ready by 11:45? Yes, he confirmed, and it was.</p>
       <div class="pull-quote">
-        The food was collected and carried back into the temple, bowls in both hands, as
-        Shravan joined the queue. Rajan Panditji, whom Shravan had never met, stood before
-        the Shiv Mandir on a Monday, the day of Shiva. He took the bowls without hesitation,
-        stating he would offer them to Baba himself. He returned with the bowls, now containing
-        marigolds from the shrine.
+        The food was collected and carried back into the temple, bowls in both hands, as Shravan joined the queue. Rajan Panditji, whom Shravan had never met, stood before the Shiv Mandir on a Monday, the day of Shiva. He took the bowls without hesitation, stating he would offer them to Baba himself. He returned with the bowls, now containing marigolds from the shrine.
       </div>
-      <p>
-        Those bowls went back to Hotel Anupam, where their contents were mixed into larger
-        vessels. With Rohit and Vijay standing alongside unasked, more than 75 devotees were
-        fed. Prakash refused payment, Kundan requested only ₹500 for gas. Every ingredient
-        had come from Milan Stores in Garam Pani.
-      </p>
-      <p>
-        None of it was planned: not Dada, not Kundan's confusion that transformed into faith,
-        not the noon timing, not Rajan Panditji standing exactly where he needed to be on
-        precisely that day, not Prakash delivering on time, not the marigolds returning in
-        the bowls.
-      </p>
-      <p>
-        To this day, there is no explanation for why the food needed to be cooked at home
-        and carried from Hyderabad in the first place, why Swetta woke at 2 AM and said yes
-        without a second thought, or why every door opened exactly when it needed to.
-      </p>
-      <p>
-        राम SITA राम was born from that moment, not as a business, but as a recognition
-        that something larger had already decided what it would become.
-      </p>
+      <p>Those bowls went back to Hotel Anupam, where their contents were mixed into larger vessels. With Rohit and Vijay standing alongside unasked, more than 75 devotees were fed. Prakash refused payment, Kundan requested only ₹500 for gas. Every ingredient had come from Milan Stores in Garam Pani.</p>
+      <p>None of it was planned: not Dada, not Kundan's confusion that transformed into faith, not the noon timing, not Rajan Panditji standing exactly where he needed to be on precisely that day, not Prakash delivering on time, not the marigolds returning in the bowls.</p>
+      <p>To this day, there is no explanation for why the food needed to be cooked at home and carried from Hyderabad in the first place, why Swetta woke at 2 AM and said yes without a second thought, or why every door opened exactly when it needed to.</p>
+      <p>राम SITA राम was born from that moment, not as a business, but as a recognition that something larger had already decided what it would become.</p>
     </div>
 
     <div class="story-body hi devanagari">
       <p>यह किसी योजना से नहीं, बल्कि एक ऐसे सवाल से शुरू हुआ जिसका कोई जवाब नहीं था।</p>
-      <p>
-        18 सितंबर 2026 को, सुबह 4 बजे, Shravan नंगे पैर और अकेले हैदराबाद से निकले।
-        साथ था वह खाना जो उनकी पत्नी Swetta ने रात 2 बजे उठकर बनाया था, बिना यह जाने कि इसका उद्देश्य क्या है।
-        घी पोंगल और सोया करी, बिना प्याज, बिना लहसुन, उस देखभाल के साथ जो केवल वह पत्नी दे सकती है
-        जो अपने पति की अंतरात्मा पर भरोसा करती हो।
-      </p>
-      <p>
-        Vimal नाम के कैब ड्राइवर ने, बिना पूछे, पहले भूमियांधार मंदिर रुकने का सुझाव दिया,
-        फिर कैंची धाम। भोजन बाबा को अर्पित किया गया, फिर बाहर 11 भक्तों में भोग के रूप में बाँटा गया।
-        उस शाम दर्शन के लिए लौटते समय, सुरक्षा गार्ड ने उन्हें पहचाना और खाने की असाधारण स्वाद की
-        तारीफ की।
-      </p>
-      <p>
-        उसी शाम, त्रिपाठी जी, जिन्हें दादा कहते हैं, ने यह कहानी सुनी। उन्होंने खाना नहीं खाया था
-        और उन्हें लगा यह संयोग नहीं था, बाबा चाहते थे कि यह व्यंजन फिर बने। उन्होंने Hotel Anupam
-        के मालिक Kundan को फोन किया और बताया कि एक भक्त के लिए एक विशेष व्यंजन तैयार करना है।
-        Kundan हैरान थे, मंदिर अपना खाना खुद बनाता है, तो उनसे क्यों? वह कुछ देर उस उलझन में बैठे रहे,
-        फिर एक एहसास हुआ: यह बाबा का काम है। उन्होंने हाँ कह दिया।
-      </p>
-      <p>
-        उस रविवार की शाम, Swetta ने हैदराबाद से Hotel Anupam के शेफ Prakash को फोन किया।
-        उन्होंने फोन पर पूरी रेसिपी बताई, हर कदम समझाया और इस रसोई की सात्विक आवश्यकताओं पर
-        जोर दिया: बिना प्याज, बिना लहसुन, कुछ भी नहीं जो भोग को कमज़ोर करे।
-      </p>
-      <p>
-        21 सितंबर की सुबह, दर्शन के दौरान, एक पंडितजी ने बताया कि दोपहर को बाबा को भोग लगाया जाता है।
-        Prakash को तुरंत फोन गया: क्या 11:45 तक खाना तैयार हो सकता है? हाँ, उन्होंने पुष्टि की, और हो गया।
-      </p>
+      <p>18 सितंबर 2026 को, सुबह 4 बजे, Shravan नंगे पैर और अकेले हैदराबाद से निकले। साथ था वह खाना जो उनकी पत्नी Swetta ने रात 2 बजे उठकर बनाया था, बिना यह जाने कि इसका उद्देश्य क्या है। घी पोंगल और सोया करी, बिना प्याज, बिना लहसुन, उस देखभाल के साथ जो केवल वह पत्नी दे सकती है जो अपने पति की अंतरात्मा पर भरोसा करती हो।</p>
+      <p>Vimal नाम के कैब ड्राइवर ने, बिना पूछे, पहले भूमियांधार मंदिर रुकने का सुझाव दिया, फिर कैंची धाम। भोजन बाबा को अर्पित किया गया, फिर बाहर 11 भक्तों में भोग के रूप में बाँटा गया। उस शाम दर्शन के लिए लौटते समय, सुरक्षा गार्ड ने उन्हें पहचाना और खाने की असाधारण स्वाद की तारीफ की।</p>
+      <p>उसी शाम, त्रिपाठी जी, जिन्हें दादा कहते हैं, ने यह कहानी सुनी। उन्होंने खाना नहीं खाया था और उन्हें लगा यह संयोग नहीं था, बाबा चाहते थे कि यह व्यंजन फिर बने। उन्होंने Hotel Anupam के मालिक Kundan को फोन किया और बताया कि एक भक्त के लिए एक विशेष व्यंजन तैयार करना है। Kundan हैरान थे, मंदिर अपना खाना खुद बनाता है, तो उनसे क्यों? वह कुछ देर उस उलझन में बैठे रहे, फिर एक एहसास हुआ: यह बाबा का काम है। उन्होंने हाँ कह दिया।</p>
+      <p>उस रविवार की शाम, Swetta ने हैदराबाद से Hotel Anupam के शेफ Prakash को फोन किया। उन्होंने फोन पर पूरी रेसिपी बताई, हर कदम समझाया और इस रसोई की सात्विक आवश्यकताओं पर जोर दिया: बिना प्याज, बिना लहसुन, कुछ भी नहीं जो भोग को कमज़ोर करे।</p>
+      <p>21 सितंबर की सुबह, दर्शन के दौरान, एक पंडितजी ने बताया कि दोपहर को बाबा को भोग लगाया जाता है। Prakash को तुरंत फोन गया: क्या 11:45 तक खाना तैयार हो सकता है? हाँ, उन्होंने पुष्टि की, और हो गया।</p>
       <div class="pull-quote">
-        खाना लेकर, दोनों हाथों में कटोरे थामे, Shravan कतार में मंदिर के अंदर लौटे। Rajan पंडितजी से
-        Shravan कभी नहीं मिले थे, फिर भी वह वहाँ थे, सोमवार को, शिव के दिन, शिव मंदिर के सामने।
-        उन्होंने बिना संकोच कटोरे ले लिए और कहा कि वह खुद बाबा को भोग लगाएंगे। वह कटोरे लेकर
-        वापस आए, और अब उनमें मंदिर के गेंदे के फूल थे।
+        खाना लेकर, दोनों हाथों में कटोरे थामे, Shravan कतार में मंदिर के अंदर लौटे। Rajan पंडितजी से Shravan कभी नहीं मिले थे, फिर भी वह वहाँ थे, सोमवार को, शिव के दिन, शिव मंदिर के सामने। उन्होंने बिना संकोच कटोरे ले लिए और कहा कि वह खुद बाबा को भोग लगाएंगे। वह कटोरे लेकर वापस आए, और अब उनमें मंदिर के गेंदे के फूल थे।
       </div>
-      <p>
-        वे कटोरे Hotel Anupam वापस गए, जहाँ उनकी सामग्री बड़े बर्तनों में मिला दी गई। Rohit और Vijay
-        बिना कहे साथ खड़े हो गए, और 75 से अधिक भक्तों को भोजन मिला। Prakash ने पैसे लेने से मना किया,
-        Kundan ने केवल गैस के लिए ₹500 माँगे। हर सामग्री गरम पानी में Milan Stores से आई थी।
-      </p>
-      <p>
-        कुछ भी योजनाबद्ध नहीं था: न दादा, न Kundan की वह उलझन जो आस्था में बदल गई, न दोपहर का
-        वह समय, न Rajan पंडितजी का ठीक उस दिन ठीक उस जगह खड़े होना, न Prakash का समय पर
-        खाना देना, न गेंदे के फूलों का कटोरों में वापस आना।
-      </p>
-      <p>
-        आज तक कोई स्पष्टीकरण नहीं है कि खाना घर पर बनाकर हैदराबाद से क्यों लाना पड़ा,
-        Swetta रात 2 बजे क्यों उठीं और बिना दूसरा सोचे हाँ क्यों कहा, या हर दरवाज़ा ठीक उसी
-        वक्त क्यों खुला जब खुलना था।
-      </p>
-      <p>
-        राम SITA राम उसी पल से जन्मा, एक व्यापार के रूप में नहीं, बल्कि इस पहचान के रूप में
-        कि किसी बड़ी शक्ति ने पहले से तय कर लिया था कि यह क्या बनेगा।
-      </p>
+      <p>वे कटोरे Hotel Anupam वापस गए, जहाँ उनकी सामग्री बड़े बर्तनों में मिला दी गई। Rohit और Vijay बिना कहे साथ खड़े हो गए, और 75 से अधिक भक्तों को भोजन मिला। Prakash ने पैसे लेने से मना किया, Kundan ने केवल गैस के लिए ₹500 माँगे। हर सामग्री गरम पानी में Milan Stores से आई थी।</p>
+      <p>कुछ भी योजनाबद्ध नहीं था: न दादा, न Kundan की वह उलझन जो आस्था में बदल गई, न दोपहर का वह समय, न Rajan पंडितजी का ठीक उस दिन ठीक उस जगह खड़े होना, न Prakash का समय पर खाना देना, न गेंदे के फूलों का कटोरों में वापस आना।</p>
+      <p>आज तक कोई स्पष्टीकरण नहीं है कि खाना घर पर बनाकर हैदराबाद से क्यों लाना पड़ा, Swetta रात 2 बजे क्यों उठीं और बिना दूसरा सोचे हाँ क्यों कहा, या हर दरवाज़ा ठीक उसी वक्त क्यों खुला जब खुलना था।</p>
+      <p>राम SITA राम उसी पल से जन्मा, एक व्यापार के रूप में नहीं, बल्कि इस पहचान के रूप में कि किसी बड़ी शक्ति ने पहले से तय कर लिया था कि यह क्या बनेगा।</p>
     </div>
 
   </div>
@@ -661,20 +496,12 @@
     </div>
 
     <div class="dish-desc en">
-      <p>Ghee Pongal is rice and lentils cooked in pure ghee, slow, simple, warm.
-      It is temple food. The kind served in prasad, offered before eating.
-      Paired with a soya curry built on the same sattvic principles: no allium,
-      no shortcuts. Just ingredients that don't ask the body to fight itself.</p>
-      <p style="margin-top:16px;">We serve one dish because one dish, made right, is enough.
-      This is not a menu. This is a bhog.</p>
+      <p>Ghee Pongal is rice and lentils cooked in pure ghee, slow, simple, warm. It is temple food. The kind served in prasad, offered before eating. Paired with a soya curry built on the same sattvic principles: no allium, no shortcuts. Just ingredients that don't ask the body to fight itself.</p>
+      <p style="margin-top:16px;">We serve one dish because one dish, made right, is enough. This is not a menu. This is a bhog.</p>
     </div>
     <div class="dish-desc hi devanagari">
-      <p>घी पोंगल चावल और दाल का वह भोजन है जो शुद्ध घी में धीरे-धीरे, सादगी से,
-      प्रेम से पकाया जाता है। यह मंदिर का खाना है, वैसा जो प्रसाद में परोसा जाता है,
-      खाने से पहले अर्पित किया जाता है। साथ में एक सोया करी, उसी सात्विक नियम पर,
-      बिना प्याज, बिना लहसुन, बिना किसी शॉर्टकट के।</p>
-      <p style="margin-top:16px;">हम एक ही व्यंजन परोसते हैं क्योंकि एक व्यंजन, सही तरीके से बना हो, तो काफी है।
-      यह मेन्यू नहीं है। यह भोग है।</p>
+      <p>घी पोंगल चावल और दाल का वह भोजन है जो शुद्ध घी में धीरे-धीरे, सादगी से, प्रेम से पकाया जाता है। यह मंदिर का खाना है, वैसा जो प्रसाद में परोसा जाता है, खाने से पहले अर्पित किया जाता है। साथ में एक सोया करी, उसी सात्विक नियम पर, बिना प्याज, बिना लहसुन, बिना किसी शॉर्टकट के।</p>
+      <p style="margin-top:16px;">हम एक ही व्यंजन परोसते हैं क्योंकि एक व्यंजन, सही तरीके से बना हो, तो काफी है। यह मेन्यू नहीं है। यह भोग है।</p>
     </div>
 
     <div class="price-badge">₹ 120 <span class="en">per plate</span><span class="hi devanagari">प्रति थाली</span></div>
@@ -688,28 +515,12 @@
 <div style="width:100%; height:1px; background: linear-gradient(to right, transparent, var(--gold), transparent);"></div>
 <section id="benefits">
   <div class="section" style="text-align: center;">
-    <div class="ram-214">
-      <span class="ram-digit">
-        <strong>2</strong>
-      </span>
-      <span class="ram-dot">·</span>
-      <span class="ram-digit">
-        <strong>1</strong>
-      </span>
-      <span class="ram-dot">·</span>
-      <span class="ram-digit">
-        <strong>4</strong>
-      </span>
-    </div>
-    <p class="ram-meaning" style="font-family:'Noto Serif',serif; color:var(--gold); font-style:normal; font-size:15px; margin-top:12px; line-height:1.7;">
+    <img src="214_branding.png" alt="2 Offerings · 1 Bhog · 4 Benefits" style="width:100%; max-width:500px; height:auto; margin:0 auto 16px; display:block;" />
+    <p style="font-family:'Noto Serif',serif; color:var(--gold); font-size:15px; margin-bottom:24px; line-height:1.7;">
       <span class="en">This is how राम looks when Baba writes it</span>
       <span class="hi devanagari">बाबा जब राम लिखते हैं तो ऐसा दिखता है</span>
     </p>
-    <p style="font-family:'Noto Serif',serif; color:var(--gold); font-size:15px; margin-top:4px; line-height:1.7;">
-      <span class="en">2 Offerings · 1 Bhog · 4 Benefits</span>
-      <span class="hi devanagari">2 अर्पण · 1 भोग · 4 लाभ</span>
-    </p>
-    <h2 style="margin-top: 24px;">
+    <h2>
       <span class="en">Four Reasons This Plate Nourishes</span>
       <span class="hi">यह थाली चार कारणों से पोषण देती है</span>
     </h2>
