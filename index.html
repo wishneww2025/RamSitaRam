@@ -300,40 +300,41 @@
     body.lang-hi .soul-line-hi { display: block; }
 
     /* ── Order ── */
-    #order { background: var(--sindoor); text-align: center; color: var(--ivory); }
-    #order h2 { color: var(--ivory); }
-    #order .section-eyebrow { color: rgba(253,246,232,0.7); }
-    #order .section-eyebrow-hi { color: rgba(253,246,232,0.7); }
-    .order-context { font-size: 16px; line-height: 1.8; color: rgba(253,246,232,0.85); margin-top: 24px; }
-    .before-order {
-      margin-top: 40px; background: rgba(253,246,232,0.08);
-      border: 1px solid rgba(253,246,232,0.2); padding: 28px; text-align: left;
-    }
-    .before-order h3 {
-      font-family: 'Cinzel', serif; font-size: 11px;
-      letter-spacing: 0.2em; color: var(--gold); margin-bottom: 20px;
-    }
-    .before-order ul { list-style: none; padding: 0; }
-    .before-order ul li {
-      font-size: 14px; color: rgba(253,246,232,0.8);
-      padding: 8px 0; border-bottom: 1px solid rgba(253,246,232,0.08);
-      line-height: 1.6; display: flex; gap: 10px;
-    }
-    .before-order ul li:last-child { border-bottom: none; }
-    .before-order ul li span.label {
-      color: rgba(253,246,232,0.45); font-size: 12px;
-      min-width: 90px; padding-top: 2px; font-style: italic;
-    }
-    .wa-button {
-      display: inline-flex; align-items: center; gap: 10px;
-      margin-top: 40px; background: var(--ivory);
-      color: var(--sindoor-deep); padding: 16px 36px;
-      font-family: 'Cinzel', serif; font-size: 15px;
-      font-weight: 600; letter-spacing: 0.05em;
-      text-decoration: none; border-radius: 1px; transition: background 0.2s;
-    }
-    .wa-button:hover { background: var(--ivory-warm); }
-    .wa-icon { width: 22px; height: 22px; fill: #25D366; flex-shrink: 0; }
+   /* ── Order ── */
+#order { background: var(--ivory); text-align: center; color: var(--ink); }
+#order h2 { color: var(--sindoor); }
+#order .section-eyebrow { color: var(--gold-muted); }
+#order .section-eyebrow-hi { color: var(--gold-muted); }
+.order-context { font-size: 16px; line-height: 1.8; color: var(--ink-soft); margin-top: 24px; }
+.before-order {
+  margin-top: 40px; background: var(--ivory-warm);
+  border: 1px solid var(--cream-border); padding: 24px; text-align: left;
+}
+.before-order h3 {
+  font-family: 'Cinzel', serif; font-size: 11px;
+  letter-spacing: 0.2em; color: var(--gold-muted); margin-bottom: 16px;
+}
+.before-order ul { list-style: none; padding: 0; }
+.before-order ul li {
+  font-size: 14px; color: var(--ink-soft);
+  padding: 8px 0; border-bottom: 1px solid var(--cream-border);
+  line-height: 1.6; display: flex; gap: 10px;
+}
+.before-order ul li:last-child { border-bottom: none; }
+.before-order ul li span.label {
+  color: var(--gold-muted); font-size: 12px;
+  min-width: 90px; padding-top: 2px; font-style: italic;
+}
+.wa-button {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 36px; background: var(--sindoor);
+  color: var(--ivory); padding: 16px 36px;
+  font-family: 'Cinzel', serif; font-size: 15px;
+  font-weight: 600; letter-spacing: 0.05em;
+  text-decoration: none; border-radius: 1px; transition: background 0.2s;
+}
+.wa-button:hover { background: var(--sindoor-deep); }
+.wa-icon { width: 22px; height: 22px; fill: #25D366; flex-shrink: 0; }
 
     /* ── Story (compressed) ── */
     #story { background: var(--ivory); text-align: center; }
@@ -670,7 +671,7 @@
       <span class="hi devanagari">WhatsApp पर ऑर्डर करें</span>
     </a>
 
-    <p style="margin-top:20px; font-size:13px; color:rgba(253,246,232,0.5); font-style:italic;">
+    <p style="margin-top:20px; font-size:13px; color:var(--ink-soft); opacity:0.6; font-style:italic;">
       <span class="en">Beginning in Hyderabad. Baba willing, coming to you next.</span>
       <span class="hi devanagari">हैदराबाद से शुरुआत। बाबा की इच्छा से, आप तक भी आएंगे।</span>
     </p>
