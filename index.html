@@ -123,8 +123,11 @@
     }
     .hero-eyebrow {
       font-family: 'Cinzel', serif; font-size: 11px;
-      letter-spacing: 0.2em; color: var(--gold-muted);
-      margin-bottom: 20px; display: block;
+      letter-spacing: 0.15em; color: var(--gold-muted);
+      margin-bottom: 16px; display: block; line-height: 1.6;
+    }
+    @media (max-width: 700px) {
+      .hero-eyebrow { font-size: 9px; letter-spacing: 0.1em; }
     }
     /* hero-title replaced by branding image */
     .hero-sub {
@@ -159,8 +162,13 @@
     /* Mobile hero */
     @media (max-width: 700px) {
       #hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-photo { height: 55vw; min-height: 240px; order: -1; }
-      .hero-text { padding: 40px 24px 56px; align-items: flex-start; }
+      .hero-photo { height: 72vw; min-height: 280px; order: -1; object-position: center 30%; }
+      .hero-text { padding: 32px 24px 48px; align-items: flex-start; }
+      .hero-text img { max-width: 220px !important; margin-bottom: 12px !important; }
+      .hero-dish { font-size: 13px; margin-bottom: 4px; }
+      .hero-price { font-size: 28px; margin-bottom: 20px; }
+      .hero-tagline { font-size: 13px; margin-bottom: 24px; }
+      .hero-cta { padding: 12px 24px; font-size: 13px; }
     }
 
     /* ── Section labels ── */
@@ -230,7 +238,10 @@
     .price-note { font-size: 13px; color: var(--ink-soft); margin-top: 8px; font-style: italic; }
 
     @media (max-width: 700px) {
-      .dish-inner { grid-template-columns: 1fr; gap: 32px; padding: 56px 20px; }
+      .dish-inner { grid-template-columns: 1fr; gap: 28px; padding: 48px 20px; }
+      .dish-photo { order: 2; }
+      .dish-text { order: 1; }
+      .dish-name-big { font-size: 40px; }
     }
 
     /* ── 214 / राम section ── */
@@ -421,8 +432,10 @@
     <img
       src="214-branding.png"
       alt="214 — 2 Offerings · 1 Bhog · 4 Benefits, from राम in Baba's hand"
-      style="width:100%; max-width:320px; height:auto; margin-bottom:16px;"
+      style="width:100%; max-width:300px; height:auto; margin-bottom:12px;"
     />
+
+    <p style="font-family:'Caveat',cursive; font-size:clamp(28px,6vw,38px); font-weight:700; color:var(--sindoor); line-height:1; margin-bottom:4px;">Bh.OG</p>
 
     <p class="hero-dish">
       <span class="en">Ghee Pongal &amp; Soya Curry</span>
@@ -706,8 +719,9 @@
 <!-- TESTIMONIAL -->
 <section id="testimonial" aria-labelledby="testimonial-heading">
   <div class="section" style="text-align:center;">
-    <span class="section-eyebrow en">HER WORDS</span>
-    <span class="section-eyebrow-hi devanagari">उनके शब्द</span>
+    <p class="testimonial-name">DR. TANUJA KHURANA</p>
+    <p class="testimonial-title">Celebrity Nutritionist, Hyderabad</p>
+    <p class="testimonial-award">IEA International Excellence Award — Best Nutritionist and Dietician in South India</p>
     <div class="divider"></div>
     <p class="testimonial-quote en">
       Totally amazing! The taste was so full of flavour and goodness. You can truly taste the freshness in every bite. The flavour of the ghee is so pure, you can actually feel it with every bite. And the soya curry was absolutely delicious, with just the right amount of spice.
@@ -715,9 +729,6 @@
     <p class="testimonial-quote hi devanagari" style="font-style:normal;">
       बिल्कुल अद्भुत! स्वाद इतना भरपूर था। हर निवाले में ताज़गी महसूस होती है। घी का स्वाद इतना शुद्ध है। और सोया करी बिल्कुल लाजवाब थी।
     </p>
-    <p class="testimonial-name">DR. TANUJA KHURANA</p>
-    <p class="testimonial-title">Celebrity Nutritionist, Hyderabad</p>
-    <p class="testimonial-award">IEA International Excellence Award — Best Nutritionist and Dietician in South India</p>
   </div>
 </section>
 
