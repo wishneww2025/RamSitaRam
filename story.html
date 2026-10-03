@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Full Story · 214 · Bh.OG of Baba Shri Neem Karoli Maharaj Ji</title>
+  <link rel="icon" type="image/png" href="214-Final1.png" />
+  <meta name="description" content="How 214 began — the full account of a barefoot journey from Hyderabad to Kainchi Dham in September 2026." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cinzel:wght@400;600&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ivory: #FAF7F0;
+      --ivory-warm: #F2EDE0;
+      --gold: #C9A84C;
+      --gold-muted: #A8893A;
+      --sindoor: #E34234;
+      --sindoor-deep: #B82E22;
+      --ink: #2C2C2C;
+      --ink-soft: #4A4A4A;
+      --cream-border: #DDD8CC;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--ivory);
+      color: var(--ink);
+      font-family: 'Noto Serif', serif;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    .devanagari { font-family: 'Noto Serif Devanagari', 'Noto Serif', serif; }
+
+    .lang-toggle { display: flex; align-items: center; gap: 6px; }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--cream-border);
+      padding: 4px 10px;
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--ink-soft);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .lang-btn.active { background: var(--sindoor); border-color: var(--sindoor); color: var(--ivory); }
+    .lang-btn:hover:not(.active) { border-color: var(--sindoor); color: var(--sindoor); }
+
+    .hi { display: none; }
+    body.lang-hi .en { display: none; }
+    body.lang-hi .hi { display: block; }
+    body.lang-hi span.hi, body.lang-hi a.hi { display: inline; }
+    body.lang-hi span.en, body.lang-hi a.en { display: none; }
+    span.en, a.en { display: inline; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--ivory);
+      border-bottom: 1px solid var(--cream-border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-right { display: flex; align-items: center; gap: 12px; }
+    .back-link {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--sindoor);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .back-link:hover { border-color: var(--sindoor); }
+
+    .story-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    .story-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--gold-muted);
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: clamp(28px, 6vw, 42px);
+      font-weight: 600;
+      color: var(--sindoor);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .story-date {
+      font-size: 14px;
+      color: var(--gold-muted);
+      font-style: italic;
+      margin-top: 8px;
+      margin-bottom: 40px;
+      display: block;
+    }
+
+    .divider { width: 60px; height: 2px; background: var(--gold); margin: 32px 0; }
+
+    .story-body {
+      color: var(--ink-soft);
+      font-size: 16.5px;
+      line-height: 1.9;
+      text-align: left;
+    }
+    .story-body p + p { margin-top: 22px; }
+
+    .pull-quote {
+      border-left: 3px solid var(--sindoor);
+      padding: 16px 24px;
+      margin: 36px 0;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--sindoor-deep);
+      line-height: 1.6;
+    }
+
+    .story-image {
+      width: 100%;
+      max-width: 640px;
+      margin: 40px auto;
+      display: block;
+      border: 1px solid var(--cream-border);
+      border-radius: 2px;
+    }
+    .story-image-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--ink-soft);
+      font-style: italic;
+      margin-top: 10px;
+      margin-bottom: 32px;
+    }
+
+    .story-section-break {
+      text-align: center;
+      color: var(--gold);
+      font-size: 18px;
+      margin: 48px 0;
+      letter-spacing: 0.3em;
+    }
+
+    .back-cta {
+      display: inline-block;
+      margin-top: 60px;
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--sindoor);
+      text-decoration: none;
+      border-bottom: 1px solid var(--sindoor);
+      padding-bottom: 2px;
+    }
+
+    footer {
+      background: var(--ink);
+      color: rgba(253,246,232,0.45);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      line-height: 1.8;
+      font-family: 'Noto Serif', serif;
+    }
+    footer a { color: var(--gold-muted); text-decoration: none; font-family: 'Caveat', cursive; font-size: 17px; }
+
+    @media (max-width: 480px) { .story-wrap { padding: 48px 20px 72px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <a href="https://214.co.in">
+      <img src="214-Final1.png" alt="214 — राम" style="height:50px; width:auto;" />
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-hi" onclick="setLang('hi')">हिं</button>
+    </div>
+    <a href="/" class="back-link">
+      <span class="en">← Back to 214</span>
+      <span class="hi devanagari">← 214 पर वापस</span>
+    </a>
+  </div>
+</header>
+
+<div class="story-wrap">
+
+  <span class="story-eyebrow en">THE ORIGIN</span>
+  <span class="story-eyebrow hi devanagari" style="display:none;">आरंभ</span>
+
+  <h1>
+    <span class="en">A Barefoot Promise at Kainchi Dham</span>
+    <span class="hi">कैंची धाम में एक नंगे पैर का संकल्प</span>
+  </h1>
+
+  <span class="story-date en">September 18 – 21, 2026</span>
+  <span class="story-date hi devanagari" style="display:none;">18 – 21 सितंबर 2026</span>
+
+  <div class="divider"></div>
+
+  <img
+    src="baba-ram.jpg"
+    alt="Baba Neem Karoli Maharaj Ji's handwritten राम — the source of 214"
+    style="width:100%; max-width:320px; margin:0 auto 12px; display:block; opacity:0.88; border:1px solid var(--cream-border);"
+  />
+  <p style="font-size:12px; color:var(--gold-muted); font-style:italic; text-align:center; margin-bottom:40px;">
+    <span class="en">Baba's own hand. The source of 214.</span>
+    <span class="hi devanagari">बाबा का अपना हाथ। 214 का स्रोत।</span>
+  </p>
+
+  <!-- ENGLISH -->
+  <div class="story-body en">
+    <p>It began not with a plan, but with an unanswerable question.</p>
+
+    <p>On September 18, 2026, at 4 AM, Shravan departed Hyderabad barefoot and alone. He carried food his wife Swetta had woken at 2 AM to cook, without knowing its purpose. Ghee Pongal and Soya Curry, no onion, no garlic, packed with the care only a wife trusting her husband's instinct can offer.</p>
+
+    <p>A cab driver named Vimal, unprompted, suggested stopping at Bhumiyandhar temple before Kainchi Dham. The food was offered to Baba, then distributed as bhog to 11 devotees outside. That evening, returning for darshan, the security guard remembered him and remarked on the food's exceptional taste.</p>
+
+    <p>Later that same evening, Tripathi Ji, known as Dada, heard the story. Having not eaten, he felt it was no coincidence. To him, it meant Baba wanted this dish cooked again. He called Kundan, owner of Hotel Anupam, explaining a devotee needed a specific dish prepared. Kundan was puzzled; the temple cooked its own food, so why him? He sat with his confusion for a moment, then a feeling struck him — that this was Baba's doing. He agreed.</p>
+
+    <p>That Sunday evening, Swetta called Prakash, the chef at Hotel Anupam, from Hyderabad. She shared the recipe over the phone, explaining every step and emphasising the pure requirements for this kitchen: no onion, no garlic, nothing that would dilute the offering.</p>
+
+    <p>On the morning of September 21, during darshan, a panditji mentioned bhog is offered to Baba at noon. The call to Prakash was immediate: could the food be ready by 11:45? Yes, he confirmed, and it was.</p>
+
+    <div class="pull-quote">
+      The food was collected and carried back into the temple, bowls in both hands, as Shravan joined the queue. Rajan Panditji, whom Shravan had never met, stood before the Shiv Mandir on a Monday, the day of Shiva. He took the bowls without hesitation, stating he would offer them to Baba himself. He returned with the bowls, now containing marigolds from the shrine.
+    </div>
+
+    <p>Those bowls went back to Hotel Anupam, where their contents were mixed into larger vessels. With Rohit and Vijay standing alongside unasked, more than 75 devotees were fed. Prakash refused payment. Kundan requested only ₹500 for gas. Every ingredient had come from Milan Stores in Garam Pani.</p>
+
+    <p>None of it was planned: not Dada, not Kundan's confusion that transformed into faith, not the noon timing, not Rajan Panditji standing exactly where he needed to be on precisely that day, not Prakash delivering on time, not the marigolds returning in the bowls.</p>
+
+    <p>To this day, there is no explanation for why the food needed to be cooked at home and carried from Hyderabad in the first place, why Swetta woke at 2 AM and said yes without a second thought, or why every door opened exactly when it needed to.</p>
+
+    <div class="pull-quote">
+      What began as a bhog at Kainchi Dham became a vow we chose to continue. That is where 214 began.
+    </div>
+  </div>
+
+  <!-- HINDI -->
+  <div class="story-body hi devanagari">
+    <p>यह किसी योजना से नहीं, बल्कि एक ऐसे सवाल से शुरू हुआ जिसका कोई जवाब नहीं था।</p>
+
+    <p>18 सितंबर 2026 को, सुबह 4 बजे, Shravan नंगे पैर और अकेले हैदराबाद से निकले। साथ था वह खाना जो उनकी पत्नी Swetta ने रात 2 बजे उठकर बनाया था, बिना यह जाने कि इसका उद्देश्य क्या है। घी पोंगल और सोया करी, बिना प्याज, बिना लहसुन, उस देखभाल के साथ जो केवल वह पत्नी दे सकती है जो अपने पति की अंतरात्मा पर भरोसा करती हो।</p>
+
+    <p>Vimal नाम के कैब ड्राइवर ने, बिना पूछे, पहले भूमियांधार मंदिर रुकने का सुझाव दिया, फिर कैंची धाम। भोजन बाबा को अर्पित किया गया, फिर बाहर 11 भक्तों में भोग के रूप में बाँटा गया। उस शाम दर्शन के लिए लौटते समय, सुरक्षा गार्ड ने उन्हें पहचाना और खाने की असाधारण स्वाद की तारीफ की।</p>
+
+    <p>उसी शाम, त्रिपाठी जी, जिन्हें दादा कहते हैं, ने यह कहानी सुनी। उन्होंने खाना नहीं खाया था और उन्हें लगा यह संयोग नहीं था — बाबा चाहते थे कि यह व्यंजन फिर बने। उन्होंने Hotel Anupam के मालिक Kundan को फोन किया। Kundan हैरान थे, फिर एक एहसास हुआ: यह बाबा का काम है। उन्होंने हाँ कह दिया।</p>
+
+    <p>उस रविवार की शाम, Swetta ने हैदराबाद से Hotel Anupam के शेफ Prakash को फोन किया। उन्होंने पूरी रेसिपी बताई, हर कदम समझाया और शुद्धता पर जोर दिया: बिना प्याज, बिना लहसुन।</p>
+
+    <p>21 सितंबर की सुबह, दर्शन के दौरान, एक पंडितजी ने बताया कि दोपहर को बाबा को भोग लगाया जाता है। Prakash को तुरंत फोन गया: क्या 11:45 तक खाना तैयार हो सकता है? हाँ — और हो गया।</p>
+
+    <div class="pull-quote">
+      खाना लेकर, दोनों हाथों में कटोरे थामे, Shravan कतार में मंदिर के अंदर लौटे। Rajan पंडितजी से Shravan कभी नहीं मिले थे, फिर भी वह वहाँ थे — सोमवार को, शिव के दिन, शिव मंदिर के सामने। उन्होंने बिना संकोच कटोरे ले लिए और कहा कि वह खुद बाबा को भोग लगाएंगे। वह कटोरे लेकर वापस आए — और अब उनमें मंदिर के गेंदे के फूल थे।
+    </div>
+
+    <p>वे कटोरे Hotel Anupam वापस गए। Rohit और Vijay बिना कहे साथ खड़े हो गए। 75 से अधिक भक्तों को भोजन मिला। Prakash ने पैसे लेने से मना किया। Kundan ने केवल गैस के लिए ₹500 माँगे। हर सामग्री गरम पानी में Milan Stores से आई थी।</p>
+
+    <p>कुछ भी योजनाबद्ध नहीं था। न दादा, न Kundan की वह उलझन जो आस्था में बदल गई, न दोपहर का वह समय, न Rajan पंडितजी का ठीक उस दिन ठीक उस जगह खड़े होना।</p>
+
+    <p>आज तक कोई स्पष्टीकरण नहीं है कि खाना घर पर बनाकर हैदराबाद से क्यों लाना पड़ा, Swetta रात 2 बजे क्यों उठीं और बिना दूसरा सोचे हाँ क्यों कहा, या हर दरवाज़ा ठीक उसी वक्त क्यों खुला।</p>
+
+    <div class="pull-quote">
+      कैंची धाम में जो भोग शुरू हुआ, वह एक संकल्प बन गया जिसे हमने जारी रखना चुना। वहीं से 214 की शुरुआत हुई।
+    </div>
+  </div>
+
+  <div class="story-section-break">· · ·</div>
+
+  <!-- DR TANUJA -->
+  <div class="story-body en">
+    <p style="font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.2em; color:var(--gold-muted);">THE GRACE CONTINUES</p>
+    <p style="margin-top:16px;">On the evening of October 2, 2026, back in Hyderabad, a single message was sent to Dr. Tanuja Khurana, an award-winning celebrity nutritionist. The message asked if she would be open to a call about a dish.</p>
+    <p>She agreed immediately. When told there was a journey behind the food, her first question was: "What is the story?"</p>
+    <p>The story was shared. She listened. She waived her consultation fee, saying that tasting this food would be her personal contribution to the purpose. She was at her clinic, thirty minutes away, preparing to leave for the evening. She waited.</p>
+    <p>A fresh container of Ghee Pongal and Soya Curry was rushed through Hyderabad traffic. She received it with grace, tasted it without ceremony, and sent her words back.</p>
+    <p>From the first message sent to her, to the moment her feedback arrived, exactly 2 hours and 14 minutes had passed.</p>
+  </div>
+
+  <div class="story-body hi devanagari">
+    <p style="font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.2em; color:var(--gold-muted);">कृपा का सिलसिला</p>
+    <p style="margin-top:16px;">2 अक्टूबर 2026 की शाम, हैदराबाद वापस आकर, Dr. Tanuja Khurana को एक संदेश भेजा गया। वह एक पुरस्कार विजेता सेलिब्रिटी न्यूट्रिशनिस्ट हैं।</p>
+    <p>उन्होंने तुरंत हाँ कह दिया। जब बताया गया कि इस भोजन के पीछे एक यात्रा है, तो उनका पहला सवाल था: "क्या है वह कहानी?"</p>
+    <p>कहानी सुनाई गई। उन्होंने अपनी परामर्श फीस माफ कर दी। वह क्लिनिक से रुकीं। ताज़ा डिब्बा पहुँचाया गया। उन्होंने चखा और अपने शब्द वापस भेजे।</p>
+    <p>उन्हें भेजे गए पहले संदेश से लेकर उनकी प्रतिक्रिया आने तक, ठीक 2 घंटे और 14 मिनट बीते।</p>
+  </div>
+
+  <a href="/" class="back-cta">
+    <span class="en">← Return to 214.co.in</span>
+    <span class="hi devanagari">← 214.co.in पर वापस</span>
+  </a>
+
+</div>
+
+<footer>
+  <img src="214-Final1.png" alt="214 — राम" style="height:100px; width:auto; margin:0 auto 8px; display:block;" />
+  <span class="en">An Offering of WishNeww Ventures &nbsp;·&nbsp;</span>
+  <span class="hi devanagari">एक अर्पण, WishNeww Ventures की ओर से &nbsp;·&nbsp;</span>
+  <a href="https://214.co.in">214.co.in</a>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.body.classList.remove('lang-en', 'lang-hi');
+    document.body.classList.add('lang-' + lang);
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-hi').classList.toggle('active', lang === 'hi');
+    try { localStorage.setItem('rsr-lang', lang); } catch(e) {}
+  }
+  (function() {
+    try {
+      var saved = localStorage.getItem('rsr-lang');
+      if (saved === 'hi') setLang('hi');
+    } catch(e) {}
+  })();
+</script>
+
+</body>
+</html>
