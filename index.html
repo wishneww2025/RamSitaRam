@@ -114,12 +114,7 @@
     }
     .hero-mark {
       width: 92vw; max-width: 500px; height: auto;
-      display: block; margin: 0 auto 24px;
-    }
-    .hero-eyebrow {
-      font-family: 'Cinzel', serif; font-size: 11px;
-      letter-spacing: 0.15em; color: var(--gold-muted);
-      margin-bottom: 24px; display: block; line-height: 1.6;
+      display: block; margin: 0 auto 16px;
     }
     .hero-bh-og {
       font-family: 'Caveat', cursive;
@@ -160,7 +155,7 @@
     .wa-icon-sm { width: 18px; height: 18px; fill: #25D366; flex-shrink: 0; }
 
     @media (max-width: 700px) {
-      #hero { padding: 44px 20px 52px; }
+      #hero { padding: 36px 20px 48px; }
       .hero-mark { width: 88vw; max-width: 380px; }
       .hero-eyebrow { font-size: 9px; letter-spacing: 0.1em; margin-bottom: 18px; }
       .hero-bh-og { font-size: 48px; }
@@ -209,7 +204,10 @@
       margin-bottom: 28px; line-height: 1.5;
     }
     .dish-attributes {
-      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; justify-content: center;
+      display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; align-items: center;
+    }
+    .attr-row {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
     }
     .attr-tag {
       border: 1px solid var(--cream-border); padding: 5px 14px;
@@ -410,9 +408,6 @@
     alt="राम SITA राम — 214"
     class="hero-mark"
   />
-  <span class="hero-eyebrow en">A BHOG OFFERED TO BABA SHRI NEEM KAROLI MAHARAJ JI</span>
-  <span class="hero-eyebrow hi devanagari" style="display:none;">बाबा श्री नीम करोली महाराज जी को अर्पित एक भोग</span>
-
   <p class="hero-bh-og">Bh.OG</p>
   <p class="hero-dish">
     <span class="en">Ghee Pongal + Soya Curry</span>
@@ -469,16 +464,20 @@
       </p>
 
       <div class="dish-attributes">
-        <span class="attr-tag en">Pure Ghee</span>
-        <span class="attr-tag hi devanagari">शुद्ध घी</span>
-        <span class="attr-tag en">Home Cooked</span>
-        <span class="attr-tag hi devanagari">घर का बना</span>
-        <span class="attr-tag no en">No Onion</span>
-        <span class="attr-tag no hi devanagari">बिना प्याज</span>
-        <span class="attr-tag no en">No Garlic</span>
-        <span class="attr-tag no hi devanagari">बिना लहसुन</span>
-        <span class="attr-tag no en">No Preservatives</span>
-        <span class="attr-tag no hi devanagari">बिना परिरक्षक</span>
+        <div class="attr-row">
+          <span class="attr-tag en">Pure Ghee</span>
+          <span class="attr-tag hi devanagari">शुद्ध घी</span>
+          <span class="attr-tag en">Home Cooked</span>
+          <span class="attr-tag hi devanagari">घर का बना</span>
+        </div>
+        <div class="attr-row">
+          <span class="attr-tag no en">No Onion</span>
+          <span class="attr-tag no hi devanagari">बिना प्याज</span>
+          <span class="attr-tag no en">No Garlic</span>
+          <span class="attr-tag no hi devanagari">बिना लहसुन</span>
+          <span class="attr-tag no en">No Preservatives</span>
+          <span class="attr-tag no hi devanagari">बिना परिरक्षक</span>
+        </div>
       </div>
 
       <p class="dish-desc en">Ghee Pongal is rice and moong dal cooked in pure ghee — slow, simple, warm. Paired with a soya curry, also made without onion or garlic. One dish because one dish, made right, is enough.</p>
