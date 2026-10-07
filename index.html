@@ -13,12 +13,12 @@
   <meta property="og:description" content="One dish. Ghee Pongal and Soya Curry. ₹108 the bhog. ₹12 Baba's share. ₹120 your plate." />
   <meta property="og:url" content="https://214.co.in" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://214.co.in/Offering.jpg" />
+  <meta property="og:image" content="https://214.co.in/og-image.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="214 · A Bhog offered to Baba Shri Neem Karoli Maharaj Ji" />
   <meta name="twitter:description" content="One dish. Ghee Pongal and Soya Curry. ₹108 the bhog. ₹12 Baba's share. ₹120 your plate." />
-  <meta name="twitter:image" content="https://214.co.in/Offering.jpg" />
+  <meta name="twitter:image" content="https://214.co.in/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -110,35 +110,44 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center;
-      padding: 80px 24px 88px;
-      min-height: 88vh;
+      padding: 56px 24px 64px;
     }
     .hero-mark {
-      width: 80vw; max-width: 420px; height: auto;
-      display: block; margin: 0 auto 28px;
+      width: 92vw; max-width: 500px; height: auto;
+      display: block; margin: 0 auto 24px;
     }
     .hero-eyebrow {
       font-family: 'Cinzel', serif; font-size: 11px;
       letter-spacing: 0.15em; color: var(--gold-muted);
-      margin-bottom: 28px; display: block; line-height: 1.6;
+      margin-bottom: 24px; display: block; line-height: 1.6;
     }
     .hero-bh-og {
       font-family: 'Caveat', cursive;
-      font-size: clamp(36px, 8vw, 56px); font-weight: 700;
-      color: var(--sindoor); line-height: 1; margin-bottom: 8px;
+      font-size: clamp(44px, 10vw, 64px); font-weight: 700;
+      color: var(--sindoor); line-height: 1; margin-bottom: 6px;
     }
     .hero-dish {
-      font-family: 'Cinzel', serif; font-size: clamp(13px, 2vw, 16px);
-      letter-spacing: 0.08em; color: var(--ink);
-      margin-bottom: 20px;
+      font-family: 'Cinzel', serif; font-size: clamp(14px, 2.5vw, 18px);
+      letter-spacing: 0.08em; color: var(--ink); font-weight: 600;
+      margin-bottom: 16px;
     }
     .hero-price {
-      font-family: 'Cinzel', serif; font-size: clamp(32px, 5vw, 48px);
-      color: var(--sindoor); margin-bottom: 16px; letter-spacing: 0.04em;
+      font-family: 'Cinzel', serif; font-size: clamp(36px, 6vw, 52px);
+      color: var(--sindoor); margin-bottom: 20px; letter-spacing: 0.04em; font-weight: 600;
+    }
+    .hero-per-plate {
+      font-size: 0.45em; letter-spacing: 0.08em;
+      vertical-align: middle; opacity: 0.7;
+    }
+    .hero-product-truth {
+      font-family: 'Cinzel', serif; font-size: clamp(12px, 2vw, 15px);
+      letter-spacing: 0.06em; color: var(--ink); font-weight: 600;
+      margin-bottom: 10px;
     }
     .hero-tagline {
-      font-size: 15px; color: var(--ink-soft);
-      font-style: italic; margin-bottom: 40px; line-height: 1.6;
+      font-size: 14px; color: var(--ink-soft);
+      font-style: italic; margin-bottom: 36px; line-height: 1.6;
+      opacity: 0.8;
     }
     .hero-cta {
       display: inline-flex; align-items: center; gap: 10px;
@@ -151,11 +160,12 @@
     .wa-icon-sm { width: 18px; height: 18px; fill: #25D366; flex-shrink: 0; }
 
     @media (max-width: 700px) {
-      #hero { padding: 60px 20px 72px; min-height: auto; }
-      .hero-mark { width: 78vw; max-width: 320px; }
-      .hero-eyebrow { font-size: 9px; letter-spacing: 0.1em; margin-bottom: 20px; }
-      .hero-price { font-size: 36px; }
-      .hero-tagline { font-size: 13px; margin-bottom: 32px; }
+      #hero { padding: 44px 20px 52px; }
+      .hero-mark { width: 88vw; max-width: 380px; }
+      .hero-eyebrow { font-size: 9px; letter-spacing: 0.1em; margin-bottom: 18px; }
+      .hero-bh-og { font-size: 48px; }
+      .hero-price { font-size: 40px; }
+      .hero-tagline { font-size: 13px; margin-bottom: 28px; }
       .hero-cta { padding: 14px 28px; }
     }
 
@@ -192,20 +202,11 @@
       border: 1px solid var(--cream-border); border-radius: 2px;
     }
     .dish-text { text-align: center; }
-    .dish-name-big {
-      font-family: 'Caveat', cursive;
-      font-size: clamp(40px, 6vw, 60px); font-weight: 700;
-      color: var(--sindoor); line-height: 1; margin-bottom: 4px;
-    }
-    .dish-subtitle {
-      font-size: clamp(15px, 2.5vw, 18px);
-      color: var(--ink-soft); margin-bottom: 20px;
-    }
     .dish-not-menu {
       font-family: 'Noto Serif', serif;
-      font-size: clamp(16px, 2.5vw, 20px);
-      color: var(--sindoor); font-style: italic;
-      margin-bottom: 24px; line-height: 1.5;
+      font-size: clamp(18px, 3vw, 24px);
+      color: var(--sindoor); font-style: italic; font-weight: 600;
+      margin-bottom: 28px; line-height: 1.5;
     }
     .dish-attributes {
       display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; justify-content: center;
@@ -220,18 +221,12 @@
       font-size: 15px; color: var(--ink-soft);
       line-height: 1.85; margin-bottom: 28px;
     }
-    .price-badge {
-      display: inline-block; background: var(--ink); color: var(--gold);
-      padding: 12px 32px; font-family: 'Cinzel', serif;
-      font-size: 20px; letter-spacing: 0.06em;
-    }
     .price-note { font-size: 13px; color: var(--ink-soft); margin-top: 8px; font-style: italic; }
 
     @media (max-width: 700px) {
       .dish-inner { padding: 48px 20px; }
       .dish-photos { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
       .dish-photo { aspect-ratio: 1/1; }
-      .dish-name-big { font-size: 40px; }
     }
 
     /* ── 214 / राम section ── */
@@ -290,7 +285,6 @@
     body.lang-hi .soul-line-hi { display: block; }
 
     /* ── Order ── */
-   /* ── Order ── */
 #order { background: var(--ivory); text-align: center; color: var(--ink); }
 #order h2 { color: var(--sindoor); }
 #order .section-eyebrow { color: var(--gold-muted); }
@@ -387,7 +381,7 @@
 <!-- HEADER -->
 <header>
   <a href="https://214.co.in">
-    <img src="RamSitaRam.png" alt="राम SITA राम — 214" style="height:46px; width:auto;" />
+    <img src="RamSitaRam.png" alt="राम SITA राम — 214" style="height:32px; width:auto;" />
   </a>
   <div class="header-right">
     <nav aria-label="Site sections">
@@ -421,10 +415,14 @@
 
   <p class="hero-bh-og">Bh.OG</p>
   <p class="hero-dish">
-    <span class="en">Ghee Pongal &amp; Soya Curry</span>
-    <span class="hi devanagari">घी पोंगल और सोया करी</span>
+    <span class="en">Ghee Pongal + Soya Curry</span>
+    <span class="hi devanagari">घी पोंगल + सोया करी</span>
   </p>
-  <p class="hero-price">₹120</p>
+  <p class="hero-price">₹120 <span class="hero-per-plate">per plate</span></p>
+  <p class="hero-product-truth">
+    <span class="en">Home-cooked. No onion. No garlic.</span>
+    <span class="hi devanagari">घर का बना. बिना प्याज. बिना लहसुन.</span>
+  </p>
   <p class="hero-tagline">
     <span class="en">Pure. Soulful. Served with a Vow.</span>
     <span class="hi devanagari">शुद्ध. भावपूर्ण. एक संकल्प के साथ.</span>
@@ -465,12 +463,6 @@
         <span class="hi">एक थाली. एक सत्य.</span>
       </h2>
 
-      <p class="dish-name-big">Bh.OG</p>
-      <p class="dish-subtitle">
-        <span class="en">Ghee Pongal &amp; Soya Curry</span>
-        <span class="hi devanagari">घी पोंगल और सोया करी</span>
-      </p>
-
       <p class="dish-not-menu">
         <span class="en">This is not a menu. This is a Bh.OG.</span>
         <span class="hi devanagari">यह मेन्यू नहीं है। यह Bh.OG है।</span>
@@ -492,10 +484,9 @@
       <p class="dish-desc en">Ghee Pongal is rice and moong dal cooked in pure ghee — slow, simple, warm. Paired with a soya curry, also made without onion or garlic. One dish because one dish, made right, is enough.</p>
       <p class="dish-desc hi devanagari">घी पोंगल चावल और मूंग दाल का भोजन है जो शुद्ध घी में धीमे, सादगी से पकाया जाता है। साथ में सोया करी — उसी शुद्धता पर। एक थाली क्योंकि एक थाली, सही बनी हो, काफी है।</p>
 
-      <div class="price-badge">₹ 120 <span class="en">per plate</span><span class="hi devanagari">प्रति थाली</span></div>
-      <p class="price-note">
-        <span class="en">Includes Baba's share. See below.</span>
-        <span class="hi devanagari">बाबा का हिस्सा शामिल है। नीचे देखें।</span>
+      <p class="price-note" style="margin-top:8px;">
+        <span class="en">₹120 per plate · Baba's share included · <a href="#vow" style="color:var(--gold-muted);">See how</a></span>
+        <span class="hi devanagari">₹120 प्रति थाली · बाबा का हिस्सा शामिल · <a href="#vow" style="color:var(--gold-muted);">देखें कैसे</a></span>
       </p>
     </div>
   </div>
@@ -543,10 +534,13 @@
     <span class="section-eyebrow-hi devanagari">हर थाली एक संकल्प लेकर आती है</span>
 
     <h2 id="vow-heading">
-      <span class="en">₹108 + ₹12 = ₹120</span>
-      <span class="hi">₹108 + ₹12 = ₹120</span>
+      <span class="en">₹12 from every plate is carried to Kainchi Dham Trust in your name.</span>
+      <span class="hi devanagari">हर थाली का ₹12 आपके नाम से कैंची धाम ट्रस्ट को अर्पित होता है।</span>
     </h2>
     <div class="divider" style="background:rgba(201,168,76,0.4);"></div>
+    <p style="color:rgba(250,247,240,0.65); font-size:14px; letter-spacing:0.06em; font-family:'Cinzel',serif; margin-bottom:28px;">
+      ₹108 + ₹12 = ₹120
+    </p>
 
     <div class="vow-breakdown">
       <div class="vow-row">
